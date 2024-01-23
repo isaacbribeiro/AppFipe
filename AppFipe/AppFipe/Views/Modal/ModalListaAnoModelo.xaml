@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<rg:PopupPage xmlns="http://xamarin.com/schemas/2014/forms" 
+                xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                xmlns:rg="http://rotorgames.com"
+                x:Class="AppFipe.Views.Modal.ModalListaAnoModelo">
+
+    <StackLayout Padding="20">
+        <StackLayout BackgroundColor="white">
+            <SearchBar TextChanged="BuscarNaLista" />
+            <ListView ItemsSource="{Binding ListaAnoModelo}" ItemTapped="AnoModeloSelecionado">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Grid Padding="10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Label TextColor="Black" FontSize="20" Text="{Binding Nome}"></Label>
+
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+            <Button Text="Fechar" BackgroundColor="#212529" TextColor="white"
+             WidthRequest="80" HeightRequest="40" Clicked="FecharModal_Clicked"></Button>
+        </StackLayout>
+    </StackLayout>
+
+</rg:PopupPage>

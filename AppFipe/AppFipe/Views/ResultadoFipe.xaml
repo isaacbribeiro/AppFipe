@@ -1,0 +1,116 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppFipe.Views.ResultadoFipe"
+             Title="Tabela Fipe">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+
+            <ListView ItemsSource="{Binding ListaTabelaFipe}" RowHeight="400">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+
+                                <Frame Grid.Row="0" Grid.ColumnSpan="2" BackgroundColor="#212529" HeightRequest="60" CornerRadius="8" Padding="0">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="Mês de Referência" TextColor="White" FontSize="15" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="{Binding MesReferencia}" TextColor="White" FontSize="15" FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame Grid.Row="1" Grid.ColumnSpan="2" BackgroundColor="#212529" HeightRequest="60" CornerRadius="8" Padding="0">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="Código FIPE" TextColor="White" FontSize="15" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="{Binding CodigoFipe}" TextColor="White" FontSize="15" FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame Grid.Row="2" Grid.ColumnSpan="2" BackgroundColor="#212529" HeightRequest="60" CornerRadius="8" Padding="0">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="Marca" TextColor="White" FontSize="15" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="{Binding Marca}" TextColor="White" FontSize="15" FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame Grid.Row="3" Grid.ColumnSpan="2" BackgroundColor="#212529" HeightRequest="60" CornerRadius="8" Padding="0">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="Modelo" TextColor="White" FontSize="15" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="{Binding Modelo}" TextColor="White" FontSize="15" FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame Grid.Row="4" Grid.ColumnSpan="2" BackgroundColor="#212529" HeightRequest="60" CornerRadius="8" Padding="0">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="Ano Modelo" TextColor="White" FontSize="15" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                        <StackLayout VerticalOptions="Center" WidthRequest="160">
+                                            <StackLayout HorizontalOptions="EndAndExpand" WidthRequest="140">
+                                                <Label Text="{Binding AnoModelo}" TextColor="White" FontSize="15" FontAttributes="Bold" />
+                                            </StackLayout>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                                <Frame Grid.Row="5" Grid.ColumnSpan="2" BackgroundColor="white" HeightRequest="60"
+                                       CornerRadius="8" Padding="0" BorderColor="black">
+                                    <StackLayout Orientation="Horizontal" VerticalOptions="Center" Spacing="0">
+                                        <StackLayout Padding="20" HorizontalOptions="FillAndExpand">
+                                            <Label Text="Preço Médio" TextColor="black" FontSize="18" />
+                                        </StackLayout>
+                                        <StackLayout Padding="20" HorizontalOptions="FillAndExpand">
+                                            <Label Text="{Binding Valor}" TextColor="black" FontSize="18" FontAttributes="Bold" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </Frame>
+
+                            </Grid>
+
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

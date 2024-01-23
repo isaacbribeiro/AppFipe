@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"                  
+             x:Class="AppFipe.Views.SelecionarVeiculo"
+             Title="Selecione um Veículo"
+             x:Name="Pagina">
+
+    <ContentPage.Content>
+        <StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="black" HeightRequest="210" Padding="20">
+                <Image Source="carro" HeightRequest="128" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+                        CommandParameter="carros" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="CONSULTA 
+                       DE CARRO" TextColor="#fff" FontSize="20" VerticalOptions="Center" Margin="20,0,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+                        CommandParameter="carros" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button ImageSource="icon_mais" HeightRequest="44" WidthRequest="44" VerticalOptions="Center"
+            BackgroundColor="Transparent" Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}"
+            CommandParameter="carros">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+                        CommandParameter="carros" />
+                    </Button.GestureRecognizers>
+                </Button>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="#212529" HeightRequest="210" Padding="20">
+                <Image Source="moto" HeightRequest="128" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+             CommandParameter="motos" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="CONSULTA 
+            DE MOTO" TextColor="#fff" FontSize="20" VerticalOptions="Center" Margin="20,0,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+             CommandParameter="motos" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button ImageSource="icon_mais" HeightRequest="44" WidthRequest="44" VerticalOptions="Center"
+            BackgroundColor="Transparent" Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}"
+            CommandParameter="motos">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" 
+             CommandParameter="motos" />
+                    </Button.GestureRecognizers>
+                </Button>
+            </StackLayout>
+
+            <StackLayout Orientation="Horizontal" BackgroundColor="black" HeightRequest="210" Padding="20">
+                <Image Source="caminhao" HeightRequest="128" VerticalOptions="Center">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" CommandParameter="caminhoes" />
+                    </Image.GestureRecognizers>
+                </Image>
+
+                <Label Text="CONSULTA DE CAMINHAO" TextColor="#fff" FontSize="20" VerticalOptions="Center" Margin="20,0,0,0">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" CommandParameter="caminhoes" />
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Button ImageSource="icon_mais" HeightRequest="44" WidthRequest="44" VerticalOptions="Center"
+            BackgroundColor="Transparent" Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}"
+            CommandParameter="caminhoes">
+                    <Button.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding Source={x:Reference Pagina}, Path=BindingContext.RedirecionaConsultarFipe}" CommandParameter="caminhoes" />
+                    </Button.GestureRecognizers>
+                </Button>
+            </StackLayout>
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>   

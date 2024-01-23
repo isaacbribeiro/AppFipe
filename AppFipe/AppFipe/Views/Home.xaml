@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:forms="clr-namespace:Microcharts.Forms;assembly=Microcharts.Forms"
+             x:Class="AppFipe.Views.Home"
+             NavigationPage.HasNavigationBar="False"
+             x:Name="Pagina">
+        
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <StackLayout VerticalOptions="FillAndExpand" HorizontalOptions="Fill" BackgroundColor="#212529">
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
+                <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
+                    <Image Source="icon_carro_fipe.png" VerticalOptions="Center" HeightRequest="64" />
+                </ContentView>
+            </StackLayout>
+        </StackLayout>
+        <ScrollView Grid.Row="1">
+            <StackLayout BackgroundColor="white" Spacing="10">
+
+                <Label FontSize="25" HorizontalOptions="CenterAndExpand" Text="PREÇO DOS AUTOMÓVEIS" FontAttributes="Bold"></Label>
+                <Label FontSize="20" HorizontalOptions="CenterAndExpand" Text="Variação em 12 meses, em %" FontAttributes="Bold"></Label>
+
+                <forms:ChartView x:Name="linesChart" HeightRequest="200" WidthRequest="200"></forms:ChartView>
+
+                <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
+                    <Label Text="Tabela Fipe" FontSize="Title" FontAttributes="Bold"/>
+                    <Label Text="Consulte o valor de um veículo" FontSize="16" Padding="0,0,0,0" FontAttributes="Bold"/>
+                    <Button Margin="0,10,0,0" Text="Consultar" BackgroundColor="#212529"                                
+                TextColor="White" FontAttributes="Bold" Command="{Binding Source={x:Reference Pagina}, 
+                    Path=BindingContext.RedirecionaSelecionarVeiculo}"/>
+                </StackLayout>
+
+            </StackLayout>
+        </ScrollView>
+    </Grid>
+</ContentPage>
